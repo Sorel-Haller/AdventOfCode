@@ -1,0 +1,22 @@
+f = open('input.txt', 'r')
+
+lines = f.readlines()
+first = []
+second = []
+
+for line in lines:
+    a, b = [int(l) for l in line.split()]
+    first.append(a)
+    second.append(b)
+
+first.sort()
+second.sort()
+
+print(first, second)
+
+res = 0
+
+for i in range(len(first)):
+    res += abs(first[i] - second [i])
+    print (abs(first[i] - second [i]))
+print(res)

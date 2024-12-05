@@ -1,0 +1,22 @@
+f = open('input.txt', 'r')
+
+lines = f.readlines()
+first = []
+second = []
+
+for line in lines:
+    a, b = [int(l) for l in line.split()]
+    first.append(a)
+    second.append(b)
+
+first.sort()
+second.sort()
+
+res1 = 0
+res2 = 0
+
+for i in range(len(first)):
+    res1 += abs(first[i] - second [i])
+    res2 += (first[i] * second.count(first[i]))
+print("Part1:", res1)
+print("Part2:", res2)
